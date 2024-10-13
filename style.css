@@ -1,0 +1,121 @@
+:root {
+    --text: #dae4ff;
+    --background: #000a28;
+    --primary: #75a0fe;
+    --secondary: #7101a3;
+    --accent: #fe10fd;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background); /* Use a variável */
+    color: var(--text); /* Use a variável */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--background); /* Use a variável */
+    color: var(--text); /* Use a variável */
+    padding: 20px 0;
+}
+
+.title {
+    background: var(--background);
+    background: linear-gradient(120deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    color: var(--text); /* Use a variável */
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+}
+
+.hero {
+    background-color: var(--background); /* Use a variável */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background-color: var(--primary); /* Use a variável */
+    color: var(--text); /* Use a variável */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.featured {
+    padding: 40px 0;
+}
+
+.featured h2 {
+    margin-bottom: 30px;
+}
+
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.serie {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    color: var(--text); /* Use a variável */
+}
+
+.serie img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: var(--background); /* Use a variável */
+    color: var(--text); /* Use a variável */
+    padding: 20px 0;
+    text-align: center;
+}
