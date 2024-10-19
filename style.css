@@ -1,121 +1,323 @@
-:root {
-    --text: #dae4ff;
-    --background: #000a28;
-    --primary: #75a0fe;
-    --secondary: #7101a3;
-    --accent: #fe10fd;
-}
-
+/* Definição geral do site */
 body {
-    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--background); /* Use a variável */
-    color: var(--text); /* Use a variável */
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+  }
+
+h1 {
+    color: red;
 }
 
-header {
-    background-color: var(--background); /* Use a variável */
-    color: var(--text); /* Use a variável */
-    padding: 20px 0;
+/* Barra de navegação horizontal */
+nav {
+    background-color: #222;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.title {
-    background: var(--background);
-    background: linear-gradient(120deg, var(--primary), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-}
-
-header h1 {
-    margin: 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-nav a {
-    color: var(--text); /* Use a variável */
+nav .logo a{
+    font-size: 14pt;
+    color: red;
     text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
+    font-weight: bold;
 }
 
-nav a:hover {
-    background-color: var(--accent);
-}
-
-.hero {
-    background-color: var(--background); /* Use a variável */
-    padding: 40px 0;
-    text-align: center;
-}
-
-.hero h2 {
-    margin-bottom: 20px;
-}
-
-.hero p {
-    margin-bottom: 30px;
-}
-
-.hero button {
-    background-color: var(--primary); /* Use a variável */
-    color: var(--text); /* Use a variável */
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.featured {
-    padding: 40px 0;
-}
-
-.featured h2 {
-    margin-bottom: 30px;
-}
-
-.series-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+nav .menu {
+    display: flex;
     gap: 20px;
 }
 
-.serie {
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    color: var(--text); /* Use a variável */
+nav .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14pt;
+    padding: 10px 15px;
 }
 
-.serie img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+nav .menu a:hover {
+    background-color: red;
 }
 
-footer {
-    background-color: var(--background); /* Use a variável */
-    color: var(--text); /* Use a variável */
+nav .login-form {
+    display: flex;
+    gap: 10px;
+}
+
+nav .login-form input {
+    padding: 5px;
+    font-size: 12pt;
+}
+
+nav .login-form button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+nav .login-form button:hover {
+    background-color: darkred;
+}
+
+nav .user-info {
+    color: white;
+    display: flex;
+    gap: 10px;
+}
+
+nav .user-info button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+nav .user-info button:hover {
+    background-color: darkred;
+}
+
+/* Configurações da galeria de imagens */
+.image-gallery {
+    display: grid; /* Usando grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 20px; /* Espaçamento entre as imagens */
     padding: 20px 0;
-    text-align: center;
 }
+
+.image-item {
+    width: 100%; /* As imagens ocupam toda a coluna */
+    height: 320px; /* Definindo altura fixa */
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem dentro da caixa */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.image-item:hover img {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem no hover */
+    transition: 0.3s ease; /* Transição suave */
+}
+
+/* Carousel styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+  }
+
+h1 {
+    color: red;
+}
+
+/* Barra de navegação horizontal */
+nav {
+    background-color: #222;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo a{
+    font-size: 14pt;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav .menu {
+    display: flex;
+    gap: 20px;
+}
+
+nav .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14pt;
+    padding: 10px 15px;
+}
+
+nav .menu a:hover {
+    background-color: red;
+}
+
+nav .login-form {
+    display: flex;
+    gap: 10px;
+}
+
+nav .login-form input {
+    padding: 5px;
+    font-size: 12pt;
+}
+
+nav .login-form button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+nav .login-form button:hover {
+    background-color: darkred;
+}
+
+nav .user-info {
+    color: white;
+    display: flex;
+    gap: 10px;
+}
+
+nav .user-info button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+nav .user-info button:hover {
+    background-color: darkred;
+}
+
+/* Configurações da galeria de imagens */
+.image-gallery {
+    display: grid; /* Usando grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 20px; /* Espaçamento entre as imagens */
+    padding: 20px 0;
+}
+
+.image-item {
+    width: 100%; /* As imagens ocupam toda a coluna */
+    height: 320px; /* Definindo altura fixa */
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem dentro da caixa */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.image-item:hover img {
+    transform: scale(1.05); /* Aumenta ligeiramente a imagem no hover */
+    transition: 0.3s ease; /* Transição suave */
+}
+
+/* Carousel styles */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.carousel-container .container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.movie-card {
+    flex: 0 0 120px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #1e0e3e;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+
+    .content {
+        font-size: 1.5rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        opacity: 0;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        background: rgb(2, 2, 46);
+        background: linear-gradient(
+            0deg,
+            rgba(2, 2, 46, 0.6755077030812324) 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        transform: translatey(100%);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        visibility: hidden;
+
+        span {
+            display: block;
+            margin-top: 5px;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.movie-card:hover {
+    flex: 0 0 350px;
+    box-shadow: 1px 3px 15px #7645d8;
+    transform: translatey(-30px);
+}
+
+.movie-card:hover .content {
+    opacity: 1;
+    transform: translatey(0%);
+    visibility: visible;
+}
+
+.ranking_container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    height: 500px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
